@@ -1,0 +1,143 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: #805959;
+    color: white;
+
+}
+.navbar-brand{
+    font-family: 'Tektur', cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    
+}
+.nav-link{
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+}
+.container{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+h1{
+    margin-top: 40px;
+}
+
+.game-board{
+    
+
+    display: grid;
+    grid-template-columns: repeat(3,minmax(120px,1fr));
+    margin-top: 40px;
+}
+.cell{
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 60px;
+    font-weight: 600;
+    height: 120px;
+    cursor: pointer;
+}
+.cell:first-child,.cell:nth-child(2),.cell:nth-child(3){
+    border-top: none;
+}
+.cell:nth-child(3n){
+    border-right: none;
+}
+.cell:nth-child(n+7){
+    border-bottom: none;
+}
+.cell:nth-child(3n-2){
+    border-left: none;
+}
+
+.cell:hover{
+    background-color: #af7474;
+    
+}
+
+.game-players{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+}
+.player{
+    margin-inline: 18px; /* left right margin*/
+    font-size: 23px;
+    font-weight: 600;
+    
+}
+.restartBtn{
+    margin-block: 18px; /* top bottom*/
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.noClickClass{
+    background-color: #8c8c8c;
+}
+
+.alertBox{
+    position: absolute;
+    top:76px;
+    background-color:#dfdfdf ;
+    color:#4d4b51;
+    width: 100%;
+    padding: 7px 12px;
+    font-size: 19px;
+    font-weight: 570;
+    height: 40px;
+}
+
+.white-section{
+    background-color: white;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 50px;
+    color: black;
+}
+
+.social-icon{
+    margin: 20px 10px;
+    color: black;
+    
+    
+}
+
+
+/* for mobile screens*/
+@media  screen and (max-width:550px){
+    h1{
+        font-size: 24px;
+
+    }
+    .game-board{
+        grid-template-columns: repeat(3,minmax(90px,1fr));
+
+    }
+    .cell{
+        height: 90px;
+        font-size: 50px;
+    }
+    
+}
